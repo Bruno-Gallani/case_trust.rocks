@@ -20,15 +20,15 @@ def school_status(school_absences, average_grade, total_classes):
   if school_absences > (total_classes * 0.25):
     situation = "Reprovado por Falta"
   else:
-    if average_grade < 5:
+    if average_grade < 50:
       situation = "Reprovado por Nota"
-    elif average_grade >= 5 and average_grade < 7:
+    elif average_grade >= 50 and average_grade < 70:
       situation = "Exame Final"
-    elif average_grade >= 7:
+    elif average_grade >= 70:
       situation = "Aprovado"
     
   if situation == "Exame Final":
-    minimum_grade = 10 - average_grade
+    minimum_grade = 100 - average_grade
     approval_grade = f"naf >= {minimum_grade:.2f}"
   else:
     approval_grade = 0
@@ -84,7 +84,7 @@ def main():
 
     for linha in students_values:
       absences = int(linha[2])
-      exam_1, exam_2, exam_3 = float(linha[3]) / 10, float(linha[4]) / 10, float(linha[5]) / 10
+      exam_1, exam_2, exam_3 = float(linha[3]), float(linha[4]), float(linha[5])
       average_grade = (exam_1 + exam_2 + exam_3) / 3
       situation, approval_grade = school_status(absences, average_grade, total_classes)
       data_to_add.append([situation, approval_grade])
