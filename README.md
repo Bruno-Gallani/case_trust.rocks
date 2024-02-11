@@ -6,7 +6,7 @@ The requirements for running the presented script are:
 
 # Setting up the environment
 
-In order to modify Google Sheets spreadsheets using Python, I needed to use the Google Sheets API. But, for this, I followed the four steps below:
+To modify Google Sheets spreadsheets using Python, I needed to use the Google Sheets API. But, for this, I followed the four steps below:
 
 - **Step 1**: Create a project on <a href="https://console.cloud.google.com/">*Google Cloud*</a>;
 - **Step 2**: Select the created project, and activate the necessary APIs;
@@ -19,7 +19,7 @@ pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-
 ```
 
 # Creating the app
-After setting up the environment, we can, finally, execute commands in Python. In first place, we import the required libraries:
+After setting up the environment, we can execute commands in Python. In the first place, we import the required libraries:
 ```python
 import os.path
 from google.auth.transport.requests import Request
@@ -29,7 +29,7 @@ from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 ```
 
-Next, we set up the API scopes, the spreadsheet and its cells range to be used:
+Next, we set up the API scopes, the spreadsheet, and its cell range to be used:
 ```python
 SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
 
@@ -134,11 +134,11 @@ if __name__ == "__main__":
 # Running the app
 
 To run the app, the following steps must be followed:
-- **Step 1**: download Python, if you haven't it installed in your computer;
+- **Step 1**: download Python, if you haven't it installed on your computer;
 - **Step 2**: open the link to the <a href="https://docs.google.com/spreadsheets/d/1y1beFCzEiD4xYjzVczTWXW4TDkemwNolMb-aPptoJKs/edit#gid=0">spreadsheet</a>;
 - **Step 3**: create a folder on your personal computer, with the archives <a href="https://github.com/Bruno-Gallani/case_trust.rocks/blob/main/script.py">**script.py**</a> and <a href="https://github.com/Bruno-Gallani/case_trust.rocks/blob/main/credentials.json">**credentials.json**</a>;
-- **Step 4**: right click on the folder previously created, click on "properties" and copy the local to the file;
-- **Step 5**: open the command line (cmd), using the key shorcut `win + R`. Write `cd`, add a space, and then paste the text copied on the previous step;
+- **Step 4**: enter the folder previously created, right-click the file <a href="https://github.com/Bruno-Gallani/case_trust.rocks/blob/main/script.py">**script.py**</a> and <a href="https://github.com/Bruno-Gallani/case_trust.rocks/blob/main/credentials.json">, click on "properties" and copy the local to the file;
+- **Step 5**: open the command line (cmd), using the key shortcut `win + R`. Write `cd`, add a space, and then paste the text copied from the previous step;
 - **Step 6**: now, write this code "`pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib`". And then, after the installation, write "`python script.py`";
-- **Step 7**: in the opened window, select your google account to do the authentication for the app, and create a `token.json` file;
-- **Step 8**: after the authentication, close the window, and run again the piece of code "`python script.py`". Notice the changes on the spreadsheet values. 
+- **Step 7**: in the opened window, select your Google account to do the authentication for the app, and create a `token.json` file;
+- **Step 8**: after the authentication, close the window, and run the piece of code "`python script.py again`". Notice the changes in the spreadsheet values. 
