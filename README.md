@@ -140,7 +140,7 @@ The following steps must be followed for running the app:
 - **Step 1**: download Python, if you haven't it installed on your computer;
 - **Step 2**: open the following <a href="https://docs.google.com/spreadsheets/d/1y1beFCzEiD4xYjzVczTWXW4TDkemwNolMb-aPptoJKs/edit#gid=0">spreadsheet</a>;
 - **Step 3**: create a folder on your personal computer, download the files <a href="https://github.com/Bruno-Gallani/case_trust.rocks/blob/main/solution_script.py">**solution_script.py**</a> and <a href="https://github.com/Bruno-Gallani/case_trust.rocks/blob/main/credentials.json">**credentials.json**</a>, move them to the created folder;
-- **Step 4**: enter the folder previously created, right-click the file <a href="https://github.com/Bruno-Gallani/case_trust.rocks/blob/main/solution_script.py">**solution_script.py**</a>, click on "properties" and copy the file location;
+- **Step 4**: open the folder previously created, right-click the file <a href="https://github.com/Bruno-Gallani/case_trust.rocks/blob/main/solution_script.py">**solution_script.py**</a>, click on "properties" and copy the file location;
 - **Step 5**: open the command line (cmd) using the key shortcut `win + R`. Write `cd`, add a space, enter the text copied from the previous step;
 - **Step 6**: now, paste the code "`pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib`", press enter. After the installation, enter "`python solution_script.py`";
 - **Step 7**: in the opened window, select your Google account, a security window will be shown. In this window, click "Advanced", click "Access case_tunts.rocks (not secure)" to open the authentication window. Now click "continue" to authenticate the app;
