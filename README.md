@@ -1,8 +1,8 @@
-The solution was all written in *Python*.
+The solution was all written in *Python*, and the official <a href="https://developers.google.com/sheets/api/quickstart/python">Google Sheets API documentation</a> was used as reference for building this app.
 
 The requirements for running the presented script are:
 - <a href="https://www.python.org/downloads/">Python</a> installed, preferentially the most recent version;
-- Download the files showed in the repository: credentials.py and script.py.
+- Download the files uploaded in the repository: <a href="https://github.com/Bruno-Gallani/case_trust.rocks/blob/main/credentials.json">**credentials.py**</a> and <a href="https://github.com/Bruno-Gallani/case_trust.rocks/blob/main/script.py">**script.py**</a>.
 
 # Setting up the environment
 
@@ -13,7 +13,7 @@ In order to modify Google Sheets spreadsheets using Python, I needed to use the 
 - **Step 3**: Configure the *OAuth* permission screen;
 - **Step 4**: Authorize credentials for a computer application.
 
-After this setup, the **credentials.py** file was generated, and then I installed the Google client library for Python. For that, I executed the following code at the VSCode terminal:
+After this setup, the <a href="https://github.com/Bruno-Gallani/case_trust.rocks/blob/main/credentials.json">**credentials.json**</a> file was generated, and then I installed the Google client library for Python. For that, I executed the following code at the VSCode terminal:
 ```
 pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
 ```
