@@ -1,8 +1,9 @@
-The solution was all written in *Python*, and the official <a href="https://developers.google.com/sheets/api/quickstart/python">Google Sheets API documentation</a> was used as reference for building this app.
+The solution was all written in *Python*, the original file used for solving the problem was a jupyter notebook `.ipynb`. You can find it <a href="https://github.com/Bruno-Gallani/case_trust.rocks/blob/main/Case%20-%20TrustRocks.ipynb">here</a>.
+- The official <a href="https://developers.google.com/sheets/api/quickstart/python">Google Sheets API documentation</a> was used as reference for building this app.
 
 The requirements for running the presented script are:
 - <a href="https://www.python.org/downloads/">Python</a> installed, preferentially the most recent version;
-- Download the files uploaded in the repository: <a href="https://github.com/Bruno-Gallani/case_trust.rocks/blob/main/credentials.json">**credentials.json**</a> and <a href="https://github.com/Bruno-Gallani/case_trust.rocks/blob/main/script.py">**script.py**</a>.
+- Download the files uploaded in the repository: <a href="https://github.com/Bruno-Gallani/case_trust.rocks/blob/main/credentials.json">**credentials.json**</a> and <a href="https://github.com/Bruno-Gallani/case_trust.rocks/blob/main/solution_script.py">**solution_script.py**</a>.
 
 # Setting up the environment
 
@@ -48,15 +49,15 @@ def school_status(school_absences, average_grade, total_classes):
   if school_absences > (total_classes * 0.25):
     situation = "Reprovado por Falta"
   else:
-    if average_grade < 5:
+    if average_grade < 50:
       situation = "Reprovado por Nota"
-    elif average_grade >= 5 and average_grade < 7:
+    elif average_grade >= 50 and average_grade < 70:
       situation = "Exame Final"
-    elif average_grade >= 7:
+    elif average_grade >= 70:
       situation = "Aprovado"
     
   if situation == "Exame Final":
-    minimum_grade = 10 - average_grade
+    minimum_grade = 100 - average_grade
     approval_grade = f"naf >= {minimum_grade:.2f}"
   else:
     approval_grade = 0
@@ -112,7 +113,7 @@ def main():
 
     for linha in students_values:
       absences = int(linha[2])
-      exam_1, exam_2, exam_3 = float(linha[3]) / 10, float(linha[4]) / 10, float(linha[5]) / 10
+      exam_1, exam_2, exam_3 = float(linha[3]), float(linha[4]), float(linha[5])
       average_grade = (exam_1 + exam_2 + exam_3) / 3
       situation, approval_grade = school_status(absences, average_grade, total_classes)
       data_to_add.append([situation, approval_grade])
@@ -122,6 +123,8 @@ def main():
       spreadsheetId=SPREADSHEET_ID,
       range=DATA_TO_UPDATE, valueInputOption="USER_ENTERED",
       body={"values": data_to_add}).execute()
+
+    print("Data updated!")
 
   except HttpError as err:
     print(err)
@@ -136,9 +139,10 @@ if __name__ == "__main__":
 To run the app, the following steps must be followed:
 - **Step 1**: download Python, if you haven't it installed on your computer;
 - **Step 2**: open the link to the <a href="https://docs.google.com/spreadsheets/d/1y1beFCzEiD4xYjzVczTWXW4TDkemwNolMb-aPptoJKs/edit#gid=0">spreadsheet</a>;
-- **Step 3**: create a folder on your personal computer, with the archives <a href="https://github.com/Bruno-Gallani/case_trust.rocks/blob/main/script.py">**script.py**</a> and <a href="https://github.com/Bruno-Gallani/case_trust.rocks/blob/main/credentials.json">**credentials.json**</a>;
-- **Step 4**: enter the folder previously created, right-click the file <a href="https://github.com/Bruno-Gallani/case_trust.rocks/blob/main/script.py">**script.py**</a> and <a href="https://github.com/Bruno-Gallani/case_trust.rocks/blob/main/credentials.json">, click on "properties" and copy the local to the file;
+- **Step 3**: create a folder on your personal computer, with the archives <a href="https://github.com/Bruno-Gallani/case_trust.rocks/blob/main/solution_script.py">**solution_script.py**</a> and <a href="https://github.com/Bruno-Gallani/case_trust.rocks/blob/main/credentials.json">**credentials.json**</a>;
+- **Step 4**: enter the folder previously created, right-click the file <a href="https://github.com/Bruno-Gallani/case_trust.rocks/blob/main/solution_script.py">**solution_script.py**</a>, click on "properties" and copy the local to the file;
 - **Step 5**: open the command line (cmd), using the key shortcut `win + R`. Write `cd`, add a space, and then paste the text copied from the previous step;
-- **Step 6**: now, write this code "`pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib`". And then, after the installation, write "`python script.py`";
+- **Step 6**: now, type this code "`pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib`". And then, after the installation, type "`python solution_script.py`";
 - **Step 7**: in the opened window, select your Google account to do the authentication for the app, and create a `token.json` file;
-- **Step 8**: after the authentication, close the window, and run the piece of code "`python script.py again`". Notice the changes in the spreadsheet values. 
+- **Step 8**: after the authentication, close the window, and run the piece of code "`python solution_script.py again`". Notice the changes in the spreadsheet values;
+- **Step 9** (optional): type the code `pip uninstall google-api-python-client google-auth-httplib2 google-auth-oauthlib` to uninstall the libraries previously installed for running this application.
