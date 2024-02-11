@@ -7,20 +7,20 @@ The requirements for running the presented script are:
 
 # Setting up the environment
 
-To modify Google Sheets spreadsheets using Python, I needed to use the Google Sheets API. But, for this, I followed the four steps below:
+To modify Google Sheets spreadsheets using Python, the Google Sheets API was required. Through the four steps below:
 
 - **Step 1**: Create a project on <a href="https://console.cloud.google.com/">*Google Cloud*</a>;
 - **Step 2**: Select the created project, and activate the necessary APIs;
 - **Step 3**: Configure the *OAuth* permission screen;
 - **Step 4**: Authorize credentials for a computer application.
 
-After this setup, the <a href="https://github.com/Bruno-Gallani/case_trust.rocks/blob/main/credentials.json">**credentials.json**</a> file was generated, and then I installed the Google client library for Python. For that, I executed the following code at the VSCode terminal:
+After this setup, the <a href="https://github.com/Bruno-Gallani/case_trust.rocks/blob/main/credentials.json">**credentials.json**</a> file was generated, and then the Google client library for Python was installed. For that, the following code was executed at the VSCode terminal:
 ```
 pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
 ```
 
 # Creating the app
-After setting up the environment, we can execute commands in Python. In the first place, we import the required libraries:
+After setting up the environment, Python commands finally could be executed. In the first place, the required libraries were imported:
 ```python
 import os.path
 from google.auth.transport.requests import Request
@@ -30,7 +30,7 @@ from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 ```
 
-Next, we set up the API scopes, the spreadsheet, and its cell range to be used:
+Next, the API scopes, the spreadsheet, and its cell range to be used were set up:
 ```python
 SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
 
@@ -42,7 +42,7 @@ RANGE_NAME = "engenharia_de_software!A4:H27"
 DATA_TO_UPDATE = "engenharia_de_software!G4:H27"
 ```
 
-Now, we execute the following code to update the blank spreadsheet values:
+Then, the following code was executed to update the blank spreadsheet values:
 ```python
 def school_status(school_absences, average_grade, total_classes):
 
