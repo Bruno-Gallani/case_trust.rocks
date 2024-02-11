@@ -136,13 +136,13 @@ if __name__ == "__main__":
 
 # Running the app
 
-To run the app, the following steps must be followed:
+The following steps must be followed for running the app:
 - **Step 1**: download Python, if you haven't it installed on your computer;
-- **Step 2**: open the link to the <a href="https://docs.google.com/spreadsheets/d/1y1beFCzEiD4xYjzVczTWXW4TDkemwNolMb-aPptoJKs/edit#gid=0">spreadsheet</a>;
-- **Step 3**: create a folder on your personal computer, with the archives <a href="https://github.com/Bruno-Gallani/case_trust.rocks/blob/main/solution_script.py">**solution_script.py**</a> and <a href="https://github.com/Bruno-Gallani/case_trust.rocks/blob/main/credentials.json">**credentials.json**</a>;
-- **Step 4**: enter the folder previously created, right-click the file <a href="https://github.com/Bruno-Gallani/case_trust.rocks/blob/main/solution_script.py">**solution_script.py**</a>, click on "properties" and copy the local to the file;
-- **Step 5**: open the command line (cmd), using the key shortcut `win + R`. Write `cd`, add a space, and then paste the text copied from the previous step;
-- **Step 6**: now, type this code "`pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib`". And then, after the installation, type "`python solution_script.py`";
-- **Step 7**: in the opened window, select your Google account to do the authentication for the app, and create a `token.json` file;
-- **Step 8**: after the authentication, a window with the message "The authentication flow has completed. You may close this window." will be shown. Close this window, and run the piece of code "`python solution_script.py`" again. Notice the changes in the spreadsheet values;
+- **Step 2**: open the following <a href="https://docs.google.com/spreadsheets/d/1y1beFCzEiD4xYjzVczTWXW4TDkemwNolMb-aPptoJKs/edit#gid=0">spreadsheet</a>;
+- **Step 3**: create a folder on your personal computer, download the archives <a href="https://github.com/Bruno-Gallani/case_trust.rocks/blob/main/solution_script.py">**solution_script.py**</a> and <a href="https://github.com/Bruno-Gallani/case_trust.rocks/blob/main/credentials.json">**credentials.json**</a>, move them to the created folder;
+- **Step 4**: enter the folder previously created, right-click the file <a href="https://github.com/Bruno-Gallani/case_trust.rocks/blob/main/solution_script.py">**solution_script.py**</a>, click on "properties" and copy the file location;
+- **Step 5**: open the command line (cmd) using the key shortcut `win + R`. Write `cd`, add a space, enter the text copied from the previous step;
+- **Step 6**: now, paste the code "`pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib`", press enter. After the installation, enter "`python solution_script.py`";
+- **Step 7**: in the opened window, select your Google account, a security window will be shown. In this window, click "Advanced", click "Access case_tunts.rocks (not secure)" to open the authentication window. Now click "continue" to authenticate the app;
+- **Step 8**: after the authentication, a file named `token.json` will be generated in the folder you previously created, and a window with the message "The authentication flow has completed. You may close this window." will be shown. Close this window, and run the piece of code "`python solution_script.py`" again. Notice the changes in the spreadsheet cell range **(G4:H27)** values;
 - **Step 9** (optional): type the code `pip uninstall google-api-python-client google-auth-httplib2 google-auth-oauthlib` to uninstall the libraries previously installed for running this application.
