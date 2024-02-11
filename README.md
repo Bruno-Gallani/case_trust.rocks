@@ -2,7 +2,7 @@ The solution was all written in *Python*, and the official <a href="https://deve
 
 The requirements for running the presented script are:
 - <a href="https://www.python.org/downloads/">Python</a> installed, preferentially the most recent version;
-- Download the files uploaded in the repository: <a href="https://github.com/Bruno-Gallani/case_trust.rocks/blob/main/credentials.json">**credentials.py**</a> and <a href="https://github.com/Bruno-Gallani/case_trust.rocks/blob/main/script.py">**script.py**</a>.
+- Download the files uploaded in the repository: <a href="https://github.com/Bruno-Gallani/case_trust.rocks/blob/main/credentials.json">**credentials.json**</a> and <a href="https://github.com/Bruno-Gallani/case_trust.rocks/blob/main/script.py">**script.py**</a>.
 
 # Setting up the environment
 
@@ -136,7 +136,7 @@ if __name__ == "__main__":
 To run the app, the following steps must be followed:
 - **Step 1**: download Python, if you haven't it installed in your computer;
 - **Step 2**: open the link to the <a href="https://docs.google.com/spreadsheets/d/1y1beFCzEiD4xYjzVczTWXW4TDkemwNolMb-aPptoJKs/edit#gid=0">spreadsheet</a>;
-- **Step 3**: create a folder on your personal computer, with the archives **script.py** and **credentials.py**;
+- **Step 3**: create a folder on your personal computer, with the archives <a href="https://github.com/Bruno-Gallani/case_trust.rocks/blob/main/script.py">**script.py**</a> and <a href="https://github.com/Bruno-Gallani/case_trust.rocks/blob/main/credentials.json">**credentials.json**</a>;
 - **Step 4**: right click on the folder previously created, click on "properties" and copy the local to the file;
 - **Step 5**: open the command line (cmd), using the key shorcut `win + R`. Write `cd ` and paste the text copied on the previous step;
 - **Step 6**: now, write this code "`pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib`". And then, after the installation, write "`python script.py`";
