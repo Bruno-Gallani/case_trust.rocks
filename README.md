@@ -138,7 +138,7 @@ To run the app, the following steps must be followed:
 - **Step 2**: open the link to the <a href="https://docs.google.com/spreadsheets/d/1y1beFCzEiD4xYjzVczTWXW4TDkemwNolMb-aPptoJKs/edit#gid=0">spreadsheet</a>;
 - **Step 3**: create a folder on your personal computer, with the archives <a href="https://github.com/Bruno-Gallani/case_trust.rocks/blob/main/script.py">**script.py**</a> and <a href="https://github.com/Bruno-Gallani/case_trust.rocks/blob/main/credentials.json">**credentials.json**</a>;
 - **Step 4**: right click on the folder previously created, click on "properties" and copy the local to the file;
-- **Step 5**: open the command line (cmd), using the key shorcut `win + R`. Write `cd ` and paste the text copied on the previous step;
+- **Step 5**: open the command line (cmd), using the key shorcut `win + R`. Write `cd`, add a space, and then paste the text copied on the previous step;
 - **Step 6**: now, write this code "`pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib`". And then, after the installation, write "`python script.py`";
 - **Step 7**: in the opened window, select your google account to do the authentication for the app;
 - **Step 8**: after the authentication, close the window, and run again the piece of code "`python script.py`". Notice the changes on the spreadsheet values. 
