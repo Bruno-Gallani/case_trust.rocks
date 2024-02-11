@@ -144,5 +144,5 @@ To run the app, the following steps must be followed:
 - **Step 5**: open the command line (cmd), using the key shortcut `win + R`. Write `cd`, add a space, and then paste the text copied from the previous step;
 - **Step 6**: now, type this code "`pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib`". And then, after the installation, type "`python solution_script.py`";
 - **Step 7**: in the opened window, select your Google account to do the authentication for the app, and create a `token.json` file;
-- **Step 8**: after the authentication, close the window, and run the piece of code "`python solution_script.py again`". Notice the changes in the spreadsheet values;
+- **Step 8**: after the authentication, a window with the message "The authentication flow has completed. You may close this window." will be shown. Close this window, and run the piece of code "`python solution_script.py`" again. Notice the changes in the spreadsheet values;
 - **Step 9** (optional): type the code `pip uninstall google-api-python-client google-auth-httplib2 google-auth-oauthlib` to uninstall the libraries previously installed for running this application.
