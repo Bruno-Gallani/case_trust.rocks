@@ -14,7 +14,7 @@ To modify Google Sheets spreadsheets using Python, the Google Sheets API was req
 - **Step 3**: Configure the *OAuth* permission screen;
 - **Step 4**: Authorize credentials for a computer application.
 
-After this setup, the <a href="https://github.com/Bruno-Gallani/case_trust.rocks/blob/main/credentials.json">**credentials.json**</a> file was generated, and then the Google Client Library for Python was installed. For that, the following code was executed at the VSCode terminal:
+After this setup, the <a href="https://github.com/Bruno-Gallani/case_trust.rocks/blob/main/credentials.json">**credentials.json**</a> file was generated, and then the Google client library for Python was installed. For that, the following code was executed at the VSCode terminal:
 ```
 pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
 ```
