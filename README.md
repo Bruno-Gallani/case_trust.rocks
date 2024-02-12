@@ -113,9 +113,9 @@ def main():
     # Adding data
     data_to_add = []
 
-    for line in students_values:
-      absences = int(linha[2])
-      exam_1, exam_2, exam_3 = float(linha[3]), float(linha[4]), float(linha[5])
+    for student_info in students_values:
+      absences = int(student_info[2])
+      exam_1, exam_2, exam_3 = float(student_infoa[3]), float(student_info[4]), float(student_info[5])
       average_grade = (exam_1 + exam_2 + exam_3) / 3
       situation, approval_grade = school_status(absences, average_grade, total_classes)
       data_to_add.append([situation, approval_grade])
