@@ -1,5 +1,6 @@
 # Required libraries
 import os.path
+import math
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
@@ -28,8 +29,9 @@ def school_status(school_absences, average_grade, total_classes):
       situation = "Aprovado"
     
   if situation == "Exame Final":
-    minimum_grade = 100 - average_grade
-    approval_grade = f"naf >= {minimum_grade:.2f}"
+    # The math.ceil method rounds a number up to the nearest integer
+    minimum_grade = math.ceil(100 - average_grade)
+    approval_grade = f"naf >= {minimum_grade}"
   else:
     approval_grade = 0
   
@@ -101,3 +103,4 @@ def main():
 # Executing as a script
 if __name__ == "__main__":
   main()
+  print("Data updated!")
