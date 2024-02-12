@@ -113,7 +113,7 @@ def main():
     # Adding data
     data_to_add = []
 
-    for linha in students_values:
+    for line in students_values:
       absences = int(linha[2])
       exam_1, exam_2, exam_3 = float(linha[3]), float(linha[4]), float(linha[5])
       average_grade = (exam_1 + exam_2 + exam_3) / 3
