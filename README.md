@@ -138,7 +138,7 @@ if __name__ == "__main__":
 # Running the app
 
 The following steps must be followed for running the app:
-- **Step 1**: download Python, if you haven't it installed on your computer;
+- **Step 1**: download <a href="https://www.python.org/downloads/">Python 3</a>, if you haven't it installed on your computer;
 - **Step 2**: open the following <a href="https://docs.google.com/spreadsheets/d/1y1beFCzEiD4xYjzVczTWXW4TDkemwNolMb-aPptoJKs/edit#gid=0">spreadsheet</a>;
 - **Step 3**: create a folder on your personal computer, download the files <a href="https://github.com/Bruno-Gallani/case_trust.rocks/blob/main/solution_script.py">**solution_script.py**</a> and <a href="https://github.com/Bruno-Gallani/case_trust.rocks/blob/main/credentials.json">**credentials.json**</a>, move them to the created folder;
 - **Step 4**: open the folder previously created, right-click the file <a href="https://github.com/Bruno-Gallani/case_trust.rocks/blob/main/solution_script.py">**solution_script.py**</a>, click on "properties" and copy the file location;
