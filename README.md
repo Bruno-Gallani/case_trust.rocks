@@ -132,7 +132,6 @@ def main():
 # Executing as a script
 if __name__ == "__main__":
   main()
-  print("Data updated!")
 ```
 
 # Running the app
@@ -145,5 +144,5 @@ The following steps must be followed for running the app:
 - **Step 5**: open the command line (cmd) using the key shortcut `win + R`. Write `cd`, add a space, and enter the text copied from the previous step;
 - **Step 6**: now, paste the code "`pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib`", press enter. After the installation, enter "`python solution_script.py`";
 - **Step 7**: in the opened window, select your Google account, and a security window will be shown. In this window, click "Advanced", and click "Access case_tunts.rocks (not secure)" to open the authentication window. Now click "continue" to authenticate the app;
-- **Step 8**: after the authentication, a file named `token.json` will be generated in the folder you previously created, and a window with the message "The authentication flow has completed. You may close this window." will appear. Close this window, and run the piece of code "`python solution_script.py`" again. After running the script, the message "Data updated!" will be shown. Notice the changes in the spreadsheet cell range **(G4:H27)** values;
+- **Step 8**: after the authentication, a file named `token.json` will be generated in the folder you previously created, and a window with the message "The authentication flow has completed. You may close this window." will appear. Close this window, and run the piece of code "`python solution_script.py`" again. Notice the changes in the spreadsheet cell range **(G4:H27)** values;
 - **Step 9** (optional): type the code `pip uninstall google-api-python-client google-auth-httplib2 google-auth-oauthlib` to uninstall the libraries previously installed for running this application.
