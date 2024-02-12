@@ -2,7 +2,7 @@ The solution was all written in **Python**, the original file used for solving t
 - The official <a href="https://developers.google.com/sheets/api/quickstart/python">Google Sheets API documentation</a> was used as a reference for building this app.
 
 The requirements for running the presented script are:
-- <a href="https://www.python.org/downloads/">Python</a> installed, preferentially the most recent version;
+- <a href="https://www.python.org/downloads/">Python 3</a> installed, preferentially the most recent version;
 - Download the files uploaded in the repository: <a href="https://github.com/Bruno-Gallani/case_trust.rocks/blob/main/credentials.json">**credentials.json**</a> and <a href="https://github.com/Bruno-Gallani/case_trust.rocks/blob/main/solution_script.py">**solution_script.py**</a>.
 
 # Setting up the environment
