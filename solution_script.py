@@ -23,10 +23,10 @@ DATA_TO_UPDATE = "engenharia_de_software!G4:H27"
 
 def log(message):
   '''
-  Returns a log line.
+  Prints a log line.
   '''
   now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-  return print('[{now}] {message}'.format(now=now, message=message))
+  print('[{now}] {message}'.format(now=now, message=message))
 
 def get_auth_credentials_token():
   '''
