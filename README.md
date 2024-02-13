@@ -223,9 +223,7 @@ The following steps must be followed for running the app:
 - **Step 1**: download Python, if you haven't it installed on your computer;
 - **Step 2**: open the following <a href="https://docs.google.com/spreadsheets/d/1y1beFCzEiD4xYjzVczTWXW4TDkemwNolMb-aPptoJKs/edit#gid=0">spreadsheet</a>;
 - **Step 3**: create a folder on your personal computer, download the files <a href="./solution_script.py">**solution_script.py**</a>; <a href="./credentials.json">**credentials.json**</a>, and <a href="./requirements.txt">**requirements.txt**</a>, move them to the created folder;
-- **Step 4**: open the folder previously created, right-click the file <a href="./solution_script.py">**solution_script.py**</a>, click on "properties" and copy the file location;
-- **Step 5**: open the command line (cmd) using the key shortcut `win + R`. Write `cd`, add a space, and enter the text copied from the previous step;
-- **Step 6**: now, paste the code "`pip install -r requirements.txt`", and press enter. After the installation, enter "`python solution_script.py`";
-- **Step 7**: in the opened window, select your Google account, and a security window will be shown. In this window, click "Advanced", and click "Access case_tunts.rocks (not secure)" to open the authentication window. Now click "continue" to authenticate the app;
-- **Step 8**: after the authentication, a file named `token.json` will be generated in the folder you previously created, and a window with the message "The authentication flow has completed. You may close this window." will appear. Close this window, and notice the changes in the spreadsheet cell range **(G4:H27)** values;
-- **Step 9** (optional): type the code `pip uninstall -r requirements.txt` to uninstall the libraries previously installed for running this application.
+- **Step 4**: on the same folder, open the command line. Now, paste the code "`pip install -r requirements.txt`", and press enter. After the installation, enter "`python solution_script.py`";
+- **Step 5**: in the opened window, select your Google account, and a security window will be shown. In this window, click "Advanced", and click "Access case_tunts.rocks (not secure)" to open the authentication window. Now click "continue" to authenticate the app;
+- **Step 6**: after the authentication, a file named `token.json` will be generated in the folder you previously created, and a window with the message "The authentication flow has completed. You may close this window." will appear. Close this window, and notice the changes in the spreadsheet cell range **(G4:H27)** values;
+- **Step 7** (optional): type the code `pip uninstall -r requirements.txt` to uninstall the libraries previously installed for running this application.
