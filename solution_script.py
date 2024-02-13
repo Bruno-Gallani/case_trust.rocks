@@ -118,7 +118,7 @@ def get_students_values(sheet):
 
 def add_data(students_values, total_classes):
   '''
-  Returns a matrix, which contains the data to add at the spreadsheet.
+  Returns a matrix, which contains the data to add to the spreadsheet.
   '''
   try:
     data_to_add = []
