@@ -2,7 +2,6 @@ The solution was all written in **Python**, the original file used for solving t
 - The official <a href="https://developers.google.com/sheets/api/quickstart/python">Google Sheets API documentation</a> was used as a reference for building this app.
 
 The requirements for running the presented script are:
-- <a href="https://www.microsoft.com/pt-br/software-download/">Windows 8.1</a> or higher, preferentially the <a href="https://www.microsoft.com/pt-br/software-download/">Windows 10</a> version;
 - <a href="https://www.python.org/downloads/">Python 3</a> installed, preferentially the most recent version;
 - Download the uploaded files in the repository: <a href="./credentials.json">**credentials.json**</a>; <a href="./solution_script.py">**solution_script.py**</a>, and <a href="./requirements.txt">**requirements.txt**</a>;
 - Download the libraries presented on the file <a href="./requirements.txt">**requirements.txt**</a>.
@@ -54,10 +53,10 @@ Then, the following code was executed to update the blank spreadsheet values:
 ```python
 def log(message):
   '''
-  Returns a log line.
+  Prints a log line.
   '''
   now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-  return print('[{now}] {message}'.format(now=now, message=message))
+  print('[{now}] {message}'.format(now=now, message=message))
 
 def get_auth_credentials_token():
   '''
