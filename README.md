@@ -4,8 +4,8 @@ The solution was all written in **Python**, the original file used for solving t
 The requirements for running the presented script are:
 - <a href="https://www.microsoft.com/pt-br/software-download/">Windows 8.1</a> or higher, preferentially the <a href="https://www.microsoft.com/pt-br/software-download/">Windows 10</a> version;
 - <a href="https://www.python.org/downloads/">Python 3</a> installed, preferentially the most recent version;
-- Uploaded files in the repository: <a href="./credentials.json">**credentials.json**</a>; <a href="./solution_script.py">**solution_script.py**</a>, and <a href="./requirements.txt">**requirements.txt**</a>;
-- Libraries presented on the file <a href="./requirements.txt">**requirements.txt**</a>.
+- Download the uploaded files in the repository: <a href="./credentials.json">**credentials.json**</a>; <a href="./solution_script.py">**solution_script.py**</a>, and <a href="./requirements.txt">**requirements.txt**</a>;
+- Download the libraries presented on the file <a href="./requirements.txt">**requirements.txt**</a>.
 
 # Setting up the environment
 
