@@ -1,4 +1,4 @@
-The solution was all written in **Python**, the original file used for solving the problem was a jupyter notebook `.ipynb`. You can find it <a href="./Case - TuntsRocks.ipynb">here</a>.
+The solution was all written in **Python**, the original file used for solving the problem was a jupyter notebook `.ipynb`. You can find it <a href="./Case - Tunts.Rocks.ipynb">here</a>.
 - The official <a href="https://developers.google.com/sheets/api/quickstart/python">Google Sheets API documentation</a> was used as a reference for building this app.
 
 The requirements for running the presented script are:
