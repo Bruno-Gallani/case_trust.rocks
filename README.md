@@ -41,7 +41,7 @@ SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
 
 # The ID and range of the spreadsheet
 SPREADSHEET_ID = "1y1beFCzEiD4xYjzVczTWXW4TDkemwNolMb-aPptoJKs"
-RANGE_NAME = "engenharia_de_software!A4:H27"
+RANGE_NAME = "engenharia_de_software!C4:F27"
 
 # The cell range where the total number of classes is located
 CLASSES_SPREADSHEET_RANGE = "A2:H2"
@@ -53,10 +53,16 @@ DATA_TO_UPDATE = "engenharia_de_software!G4:H27"
 Then, the following code was executed to update the blank spreadsheet values:
 ```python
 def log(message):
+  '''
+  Returns a log line.
+  '''
   now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
   return print('[{now}] {message}'.format(now=now, message=message))
 
 def get_auth_credentials_token():
+  '''
+  Authenticates the user's Google account, and generates a json file named "token".
+  '''
   # Start with empty creds
   creds = None
 
@@ -81,7 +87,9 @@ def get_auth_credentials_token():
   return creds
 
 def school_status(school_absences, average_grade, total_classes):
-
+  '''
+  Returns the status of a student based on the number of absences and average grade.
+  '''
   try:
     if school_absences > (total_classes * 0.25):
       situation = "Reprovado por Falta"
@@ -101,13 +109,13 @@ def school_status(school_absences, average_grade, total_classes):
       approval_grade = 0
     
     return situation, approval_grade
-  
+
   except Exception as e:
     log(e)
 
 def get_total_classes_quantity(sheet):
   '''
-  This function returns the number of classes in the semester.
+  Returns the number of classes in the semester.
   '''
   try:
     # Getting the number of classes in the semester
@@ -126,7 +134,9 @@ def get_total_classes_quantity(sheet):
     log(e)
   
 def get_students_values(sheet):
-
+  '''
+  Returns a matrix that contains the information of each student: absences and exam grades.
+  '''
   try:
     students_values = sheet.values().get(
       spreadsheetId=SPREADSHEET_ID,
@@ -139,7 +149,7 @@ def get_students_values(sheet):
 
 def add_data(students_values, total_classes):
   '''
-  This function returns a matrix, which contains the data to add at the spreadsheet.
+  Returns a matrix, which contains the data to add to the spreadsheet.
   '''
   try:
     data_to_add = []
@@ -157,6 +167,9 @@ def add_data(students_values, total_classes):
     log(e)
 
 def update_data(sheet, data_to_add):
+  '''
+  Updates the spreadsheet data - cell range G4:H27.
+  '''
   try:
     updated_data = sheet.values().update(
         spreadsheetId=SPREADSHEET_ID,
